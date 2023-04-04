@@ -173,7 +173,7 @@ class _ContactScreenState extends State<ContactScreen> {
                         "x 3 =18",
                         style: TextStyle(
                             fontWeight: FontWeight.w400, fontSize: 13),
-                      )
+                      ),
                     ],
                   ),
                   SizedBox(height: 20),
