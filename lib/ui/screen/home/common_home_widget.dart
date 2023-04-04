@@ -57,8 +57,9 @@ class _CommonHomeWidgetState extends State<CommonHomeWidget> {
             height: 50,
             width: 170,
             decoration: BoxDecoration(
-                color: AppColor.kPrimaryLightBlue,
-                borderRadius: BorderRadius.circular(30)),
+              color: AppColor.kPrimaryLightBlue,
+              borderRadius: BorderRadius.circular(30),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

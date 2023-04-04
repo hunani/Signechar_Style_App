@@ -103,38 +103,41 @@ class _ContactScreenState extends State<ContactScreen> {
                     children: [
                       ...selectList
                           .asMap()
-                          .map((index, value) => MapEntry(
-                              index,
-                              GestureDetector(
-                                onTap: () {
-                                  selectIndex = index;
-                                  setState(() {});
-                                },
-                                child: Padding(
-                                  padding: const EdgeInsets.only(right: 20),
-                                  child: Row(
-                                    children: [
-                                      selectIndex == index
-                                          ? CircleAvatar(
-                                              radius: 6,
-                                              backgroundColor: Colors.black26,
-                                              child: CircleAvatar(
-                                                  radius: 4,
-                                                  backgroundColor:
-                                                      Color(0xff00AEC7)),
-                                            )
-                                          : CircleAvatar(
-                                              radius: 6,
-                                              backgroundColor: Colors.black26),
-                                      SizedBox(width: 10),
-                                      Text(value,
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 12)),
-                                    ],
+                          .map(
+                            (index, value) => MapEntry(
+                                index,
+                                GestureDetector(
+                                  onTap: () {
+                                    selectIndex = index;
+                                    setState(() {});
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(right: 20),
+                                    child: Row(
+                                      children: [
+                                        selectIndex == index
+                                            ? CircleAvatar(
+                                                radius: 6,
+                                                backgroundColor: Colors.black26,
+                                                child: CircleAvatar(
+                                                    radius: 4,
+                                                    backgroundColor:
+                                                        Color(0xff00AEC7)),
+                                              )
+                                            : CircleAvatar(
+                                                radius: 6,
+                                                backgroundColor:
+                                                    Colors.black26),
+                                        SizedBox(width: 10),
+                                        Text(value,
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 12)),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              )))
+                                )),
+                          )
                           .values
                           .toList(),
                     ],
